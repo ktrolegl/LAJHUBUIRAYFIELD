@@ -9,6 +9,7 @@ import Home from "@/pages/home";
 import Components from "@/pages/components";
 import Documentation from "@/pages/documentation";
 import Theming from "@/pages/theming";
+import Showcase from "@/pages/showcase";
 
 function Router() {
   return (
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/components" component={Components} />
       <Route path="/documentation" component={Documentation} />
       <Route path="/theming" component={Theming} />
+      <Route path="/showcase" component={Showcase} />
       <Route component={NotFound} />
     </Switch>
   );

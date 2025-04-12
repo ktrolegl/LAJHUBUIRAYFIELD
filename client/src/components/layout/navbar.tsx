@@ -14,6 +14,7 @@ const NavBar: React.FC = () => {
   };
 
   const navLinks = [
+    { href: "/showcase", label: "Showcase" },
     { href: "/components", label: "Components" },
     { href: "/documentation", label: "Documentation" },
     { href: "/theming", label: "Theming" },
