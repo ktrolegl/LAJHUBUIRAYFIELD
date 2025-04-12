@@ -24,25 +24,23 @@ const NavBar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link href="/">
-              <a className="flex-shrink-0 flex items-center">
-                <span className="text-primary font-bold text-xl">UI</span>
-                <span className="text-foreground font-bold text-xl">Library</span>
-              </a>
+            <Link href="/" className="flex-shrink-0 flex items-center">
+              <span className="text-primary font-bold text-xl">UI</span>
+              <span className="text-foreground font-bold text-xl">Library</span>
             </Link>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               {navLinks.map((link) => (
-                <Link key={link.href} href={link.href}>
-                  <a
-                    className={cn(
-                      "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
-                      location === link.href
-                        ? "border-primary text-foreground"
-                        : "border-transparent text-muted-foreground hover:border-border hover:text-foreground"
-                    )}
-                  >
-                    {link.label}
-                  </a>
+                <Link 
+                  key={link.href} 
+                  href={link.href}
+                  className={cn(
+                    "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
+                    location === link.href
+                      ? "border-primary text-foreground"
+                      : "border-transparent text-muted-foreground hover:border-border hover:text-foreground"
+                  )}
+                >
+                  {link.label}
                 </Link>
               ))}
             </div>
@@ -83,18 +81,18 @@ const NavBar: React.FC = () => {
         <div className="sm:hidden">
           <div className="pt-2 pb-3 space-y-1">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href}>
-                <a
-                  className={cn(
-                    "block pl-3 pr-4 py-2 border-l-4 text-base font-medium",
-                    location === link.href
-                      ? "border-primary text-primary-foreground bg-primary/10"
-                      : "border-transparent text-muted-foreground hover:bg-accent hover:border-border hover:text-foreground"
-                  )}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
+              <Link 
+                key={link.href} 
+                href={link.href}
+                className={cn(
+                  "block pl-3 pr-4 py-2 border-l-4 text-base font-medium",
+                  location === link.href
+                    ? "border-primary text-primary-foreground bg-primary/10"
+                    : "border-transparent text-muted-foreground hover:bg-accent hover:border-border hover:text-foreground"
+                )}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {link.label}
               </Link>
             ))}
           </div>

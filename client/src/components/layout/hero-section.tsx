@@ -29,16 +29,22 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           {description}
         </p>
         <div className="mt-10 flex justify-center gap-3 flex-wrap">
-          <Link href={primaryButtonLink}>
-            <Button size="lg" variant="outline" className="bg-white hover:bg-white/90 text-neutral-800 border-transparent">
-              {primaryButtonText}
-            </Button>
-          </Link>
-          <Link href={secondaryButtonLink}>
-            <Button size="lg" variant="outline" className="text-white bg-primary-800 bg-opacity-30 hover:bg-opacity-40 border-transparent">
-              {secondaryButtonText}
-            </Button>
-          </Link>
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="bg-white hover:bg-white/90 text-neutral-800 border-transparent"
+            onClick={() => window.location.href = primaryButtonLink}
+          >
+            {primaryButtonText}
+          </Button>
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="text-white bg-primary-800 bg-opacity-30 hover:bg-opacity-40 border-transparent"
+            onClick={() => window.location.href = secondaryButtonLink}
+          >
+            {secondaryButtonText}
+          </Button>
         </div>
       </div>
     </div>

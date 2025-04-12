@@ -85,11 +85,13 @@ const Home: React.FC = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <Link href="/components">
-              <Button size="lg" className="mx-auto">
-                View All Components
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              className="mx-auto"
+              onClick={() => window.location.href = "/components"}
+            >
+              View All Components
+            </Button>
           </div>
         </section>
       </main>
